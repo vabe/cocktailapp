@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cocktail</string>
+    <string name="title_home">Home</string>
+    <string name="title_about">About</string>
+    <string name="searchButton">Search</string>
+    <string name="searchInput">Search cocktail database...</string>
+</resources>
