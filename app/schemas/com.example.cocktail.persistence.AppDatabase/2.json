@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "26ab7031620856eef96cb68e18a72304",
+    "entities": [
+      {
+        "tableName": "Cocktail",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idDrink` TEXT NOT NULL, `strDrink` TEXT, `strDrinkThumb` TEXT, `strVideo` TEXT, `strCategory` TEXT, `strInstructions` TEXT, `strIngredient1` TEXT, `strIngredient2` TEXT, `strIngredient3` TEXT, `strMeasure1` TEXT, `strMeasure2` TEXT, `strMeasure3` TEXT, PRIMARY KEY(`idDrink`))",
+        "fields": [
+          {
+            "fieldPath": "idDrink",
+            "columnName": "idDrink",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strDrink",
+            "columnName": "strDrink",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strDrinkThumb",
+            "columnName": "strDrinkThumb",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strVideo",
+            "columnName": "strVideo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strCategory",
+            "columnName": "strCategory",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strInstructions",
+            "columnName": "strInstructions",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strIngredient1",
+            "columnName": "strIngredient1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strIngredient2",
+            "columnName": "strIngredient2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strIngredient3",
+            "columnName": "strIngredient3",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strMeasure1",
+            "columnName": "strMeasure1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strMeasure2",
+            "columnName": "strMeasure2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strMeasure3",
+            "columnName": "strMeasure3",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idDrink"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '26ab7031620856eef96cb68e18a72304')"
+    ]
+  }
+}

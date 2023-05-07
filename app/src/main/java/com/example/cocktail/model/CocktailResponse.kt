@@ -1,5 +1,9 @@
 package com.example.cocktail.model
 
 data class CocktailResponse (
-    val results: List<Cocktail> = listOf()
-)
+    val drinks: List<Cocktail>
+) {
+    companion object {
+        fun mock() = CocktailResponse(drinks =  listOf())
+    }
+}
