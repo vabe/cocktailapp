@@ -5,7 +5,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.cocktail.model.Cocktail
-import com.example.cocktail.model.CocktailResponse
 
 @Dao
 interface CocktailDao {
@@ -17,4 +16,7 @@ interface CocktailDao {
 
     @Query("SELECT * FROM Cocktail")
     suspend fun getCocktails(): List<Cocktail>
+
+    @Query("DELETE FROM Cocktail WHERE idDrink = :id_")
+    suspend fun deleteCocktailById(id_: String)
 }
