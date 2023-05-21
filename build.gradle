@@ -10,6 +10,7 @@ buildscript {
         hilt_version = '1.0.0'
         dagger_version = '2.44'
         kotlin_version = '1.8.20'
+        room_version = '2.4.2'
     }
     dependencies {
         classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"

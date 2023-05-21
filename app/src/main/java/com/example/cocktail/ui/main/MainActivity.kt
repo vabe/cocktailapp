@@ -19,20 +19,12 @@ import com.example.cocktail.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-//    @VisibleForTesting
-//    internal val viewModel: RootViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-//        WindowCompat.setDecorFitsSystemWindows(window, false)
-
-//        setContent {
-//            MainScreen()
-//        }
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

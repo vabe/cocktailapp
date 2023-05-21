@@ -1,6 +1,7 @@
 package com.example.cocktail.ui.about
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,13 +27,12 @@ class AboutFragment : Fragment() {
                 ViewModelProvider(this).get(AboutViewModel::class.java)
 
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        aboutViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        context?.packageManager?.getPackageInfo(requireContext().packageName, 0)?.let {
+            binding.aboutVersion.text = "Current version: ${it.versionName}"
         }
-        return root
+
+        return binding.root
     }
 
     override fun onDestroyView() {
