@@ -11,10 +11,12 @@ buildscript {
         dagger_version = '2.44'
         kotlin_version = '1.8.20'
         room_version = '2.4.2'
+        crashlytics_version = '2.9.5'
     }
     dependencies {
         classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$crashlytics_version"
     }
     repositories {
         mavenCentral()
